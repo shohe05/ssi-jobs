@@ -1,2 +1,52 @@
-<h1>Offers#search</h1>
-<p>Find me in app/views/offers/search.html.erb</p>
+<style>
+ #content {
+  background: #f5f5f5;
+ }
+p a {
+  font-size: 18px;
+  text-decoration:underline;
+  color: white;
+  font-weight: bold;
+ }
+
+ .result {
+ 	border-radius: 3px;
+  padding: 1em;
+  background: #F39C12;
+  width: 60%;
+  margin-bottom: 3%;
+  color: white;
+  }
+</style>
+
+<!--nilガード-->
+              <%
+              @query_category ||= ""
+              @query_job ||= ""
+              @query_name ||= ""
+              @query_year ||= ""
+              @search_phrase = @query_category + " " + @query_job + " " + @query_name + " " + @query_year
+              %>
+
+
+<div class="container">
+
+      <div class="row">
+  
+        <ol class="breadcrumb">
+            <li><%= link_to "Home", :controller => "offers", :action => "index" %></li>
+            <li><%= link_to @search_phrase + "の検索結果", :controller => "offers", :action => "search", :name => @query_name, :category => @query_category, :job => @query_job, :year => @query_year, :id => "re_search"  %></li>
+          </ol>
+
+            <div class="container">
+              <% @results.each do |result| %>
+              <div class="result box effect1">
+                <p style="color:white;"><%= link_to result.name, :controller => "interviews", :action => "view", :id => result.id, :search_phrase => @search_phrase, :name => @query_name, :category => @query_category, :job => @query_job, :year => @query_year %></p>
+                <p>業種：<%= result.category %></p>
+                <p>職種：<%= result.job %></p>
+                <p>年度：<%= result.year %></p>
+               </div>
+            <% end %>
+            </div>
+        </div>
+    </div>
