@@ -49,3 +49,6 @@ gem 'twitter-bootswatch-rails',  '~> 3.1.1'
 
 # twitter bootstrap helpers gem,  e.g.,  alerts etc...
 gem 'twitter-bootswatch-rails-helpers'
+
+# use devise
+gem 'devise'
