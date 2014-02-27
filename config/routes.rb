@@ -8,6 +8,7 @@ SsiJobs::Application.routes.draw do
   get "offers/search"
   get "offers/view"
   get "offers/delete"
+  post "offers/search"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
