@@ -16,18 +16,223 @@
 
     <%= yield(:page_stylesheet) if content_for?(:page_stylesheet) %>
 
-    <style type="text/css">
+  <style>
     body {
       margin-top: 60px;
+      background: #f5f5f5;
     }
-    </style>
 
-  </head>
-  <body>
+  .panel-body {
+    border-bottom: 1px solid #d3d3d3;
+  }
+
+  #modal {
+    vertical-align: center;
+  }
+
+  .breadcrumb{
+  width: 65%;
+  background: white;
+ }
+
+ .quick-search, .search-btn {
+  margin-top: 4%;
+ }
+
+ #modal, #title > a {
+  color: white;
+ }
+
+ #user {
+  color: white;
+  margin-top: 1.2em;
+ }
+
+#title {
+  font-size: 28px;
+  margin-top: 2px;
+}
+
+.user-icon {
+  height: 1.8em;
+  width: 1.8em;
+  margin-top: 1em;
+  margin-right: 0.5em;
+}
+
+#quick_search {
+  margin-top: 2px;
+}
+
+.navbar {
+  height: 50px;
+}
+
+#login, #logout {
+  margin-top: 2px;
+}
+
+</style>
+</head>
+<body>
+
+  <!--ヘッダー-->
+  <!-- Static navbar -->
+    <div class="navbar navbar-default navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <div class="navbar-brand" id="title">
+          <%= link_to "SSI jobs", root_path %>
+          </div>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+
+            <!--クイック検索-->
+            <li><%= form_tag(offers_search_path, :class => "navbar-form navbar-left", :role => "search", :id => "quick_search") do %>
+              <div id="form-group" class="col-xs-9 quick-search"><%= text_field( :search, :name, :placeholder => "会社名で検索", :class => "form-control") %></div><%= submit_tag("検索", :class => "btn btn-primary search-btn") %>
+            <% end %>
+          </li>
 
 
-    <%= yield %>
 
-  
-  </body>
+            <!--詳細検索-->
+            <!--Modal-->
+        <!--
+        <li><button data-toggle="modal" data-target="#myModal" class="btn" id="modal">詳細検索</button></li>
+        <div class="modal fade" id="myModal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title" style="color:black;">What is Emeco ?</h4>
+              </div>
+              <div class="modal-body">
+                hogehoge
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn-primary" data-dismiss="modal">OK!</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      -->
+
+
+
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><%= image_tag "user.png", :class => "user-icon" %></li>
+          <% if false %>
+            <% if user_signed_in? %>
+              <li id="user"><%= current_user.email %></li>
+              <li id="login"><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+            <% else %>
+              <li id="logout"><%= link_to "ログイン", new_user_session_path %></li>
+            <% end %>
+          <% end %>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <!-- 改善アイデア -->
+      <!-- 年収の目安で検索できる ->
+      <!-- 地域から検索できる -->
+      <!-- オフィスの様子 -->
+      <!-- 最寄り駅、通勤の便、車通勤ok? -->
+      <!-- 社員人数 -->
+      <!-- 株価、財務諸表 -->
+      <!-- 研修、最初の仕事 -->
+      <!-- ノルマ的な -->
+      <!-- 就活エピソード -->
+      <!-- 出張、転勤がある？ -->
+      <!-- OBに働いてる所感を聴いてみる -->
+      <!-- 社員食堂 -->
+
+
+    <!--ここからボディー-->
+  <div class="container">
+    <div class="row">
+
+      <!--左サイドバー-->
+      <div class="col-md-2">
+
+        <!--業界-->
+        <div class="panel panel-info">
+            <div class="panel-heading">
+              <h3 class="panel-title">業界</h3>
+            </div>
+
+            <!--nilガード-->
+            <% @categories ||= [] %>
+            <% @categories.each do |category| %>
+              <div class="panel-body"><%= link_to category, :controller => "offers", :action => "search", :method => "POST", :category => category %></div>
+            <% end %>
+          </div>
+
+          <!--職種-->
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <h3 class="panel-title">職種</h3>
+            </div>
+
+            <!--nilガード-->
+            <% @jobs ||= [] %>
+
+            <% @jobs.each do |job| %>
+              <div class="panel-body"><%= link_to job, :controller => "offers", :action => "search", :method => "POST", :job => job %></div>
+            <% end %>
+          </div>
+
+      </div>
+      <!--ここまでサイドバー-->
+
+      <div class="col-md-8">
+        <%= yield %>
+      </div>
+
+      <!--ここから左サイドバー-->
+      <div class="col-md-2">
+
+        <!--ブックマーク-->
+
+        <% if false %>
+        <% @bookmarks = []
+              if current_user.present?
+                @user_id = current_user.id
+                @bookmark_ids = Bookmark.find(:all, conditions: ["user_id = ?", current_user.id])
+                @bookmark_ids.each do |bookmark|
+                @bookmarks << Offer.find_by_id(bookmark.offer_id)
+                end 
+              end %>
+          %>
+          <% end%>
+        <div class="panel panel-success">
+            <div class="panel-heading">
+              <h3 class="panel-title">ブックマーク</h3>
+            </div>
+
+            <!--nilガード-->
+            <% @bookmarks ||= [] %>
+
+            <% @bookmarks.each do |bookmark| %>
+            <div class="panel-body"><%= link_to bookmark.name, :controller => "interviews", :action => "view", :id => bookmark.id  %></div>
+            <% end %>
+        </div>
+
+      </div>
+
+    </div>
+  </div><!--.container-->
+
+    <div id="footer" class="container" style="height: 5%;"></div>
+ 
+</body>
 </html>
