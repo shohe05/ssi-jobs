@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  ordinal: MyString
+  interviewer: MyString
+  distance: MyString
+  desk_presence: MyString
+  atmosphere: MyString
+  othres: MyString
+  question: MyString
+  impression: MyString
+  offer_id: 1
+
+two:
+  user_id: 1
+  ordinal: MyString
+  interviewer: MyString
+  distance: MyString
+  desk_presence: MyString
+  atmosphere: MyString
+  othres: MyString
+  question: MyString
+  impression: MyString
+  offer_id: 1
