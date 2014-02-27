@@ -1,4 +1,7 @@
 SsiJobs::Application.routes.draw do
+  get "interviews/index"
+  get "interviews/view"
+  get "interviews/delete"
   get "offers/index"
   get "offers/search"
   get "offers/view"
