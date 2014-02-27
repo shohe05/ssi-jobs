@@ -6,8 +6,8 @@ one:
   interviewer: MyString
   distance: MyString
   desk_presence: MyString
-  atmosphere: MyString
-  othres: MyString
+  atomosphere: MyString
+  others: MyString
   question: MyString
   impression: MyString
   offer_id: 1
@@ -18,8 +18,8 @@ two:
   interviewer: MyString
   distance: MyString
   desk_presence: MyString
-  atmosphere: MyString
-  othres: MyString
+  atomosphere: MyString
+  others: MyString
   question: MyString
   impression: MyString
   offer_id: 1
