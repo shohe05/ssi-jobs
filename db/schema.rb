@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140227070952) do
+ActiveRecord::Schema.define(version: 20140227105604) do
 
   create_table "hoges", force: true do |t|
     t.string   "fuga"
@@ -29,6 +29,21 @@ ActiveRecord::Schema.define(version: 20140227070952) do
     t.string   "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "interviews", force: true do |t|
+    t.integer  "user_id"
+    t.string   "ordinal"
+    t.string   "interviewer"
+    t.string   "distance"
+    t.string   "desk_presence"
+    t.string   "atmosphere"
+    t.string   "othres"
+    t.text     "question"
+    t.text     "impression"
+    t.integer  "offer_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "offers", force: true do |t|
