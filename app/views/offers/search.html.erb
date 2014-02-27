@@ -9,13 +9,25 @@ p a {
   font-weight: bold;
  }
 
+ #result-container {
+ 	/*display:flex;*/
+	/*flex-wrap: wrap;*/
+ 	width:auto;
+ }
+
  .result {
- 	border-radius: 3px;
+  border-radius: 3px;
   padding: 1em;
   background: #F39C12;
   width: 60%;
-  margin-bottom: 3%;
   color: white;
+  /*margin-right: 2em;*/
+  /*margin-bottom: 2em;*/
+  margin: 0 2em 4em 2em;
+  }
+
+  #inner-row {
+  	width: auto;
   }
 </style>
 
@@ -31,14 +43,14 @@ p a {
 
 <div class="container">
 
-      <div class="row">
+      <div class="row" id="inner-row">
   
         <ol class="breadcrumb">
             <li><%= link_to "Home", :controller => "offers", :action => "index" %></li>
             <li><%= link_to @search_phrase + "の検索結果", :controller => "offers", :action => "search", :name => @query_name, :category => @query_category, :job => @query_job, :year => @query_year, :id => "re_search"  %></li>
           </ol>
 
-            <div class="container">
+            <div class="container" id="result-container">
               <% @results.each do |result| %>
               <div class="result box effect1">
                 <p style="color:white;"><%= link_to result.name, :controller => "interviews", :action => "view", :id => result.id, :search_phrase => @search_phrase, :name => @query_name, :category => @query_category, :job => @query_job, :year => @query_year %></p>
