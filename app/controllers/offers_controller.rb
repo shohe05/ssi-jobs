@@ -1,5 +1,5 @@
 class OffersController < ApplicationController
-  layout 'united'
+  layout 'flatly'
 
   def index
     @offers = Offer.all
