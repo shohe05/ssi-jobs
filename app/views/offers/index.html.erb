@@ -1,4 +1,65 @@
-<h1>Offers#index</h1>
-<p>Find me in app/views/offers/index.html.erb</p>
+<style type="text/css">
+  .jumbotron {
+    width: 65%;
+  }
+  .search {
+    width: 65%;
+  }
 
-青山学院大学です。こんにちは！	
+.popular_offers {
+  list-style-type: decimal;
+}
+
+  .popular_offer {
+    margin-bottom: 2em;
+  }
+</style>
+
+<div class="container">
+
+      <!--
+      <div class="panel panel-warning search">
+            <div class="panel-heading interview-header">
+              <h3 class="panel-title">面接情報を検索</h3>
+            </div>
+            <div class="panel-body">
+                        <br>            
+      <%= form_tag(:controller => "offers", :action => "search") do %>
+
+      <div class="col-md-3" style="border-right: thin ridge #ddcdc; margin-bottom: 20px;">
+        <%= select_tag :category,
+          options_for_select( @categories.map {|c| [ "#{c}", c ] }), prompt: "業種を選択  ▼" %>
+      </div>
+    <div class="col-md-3" style="border-right: thin ridge #dcdcdc;">
+      <%= select_tag :job,
+          options_for_select( @jobs.map {|c| [ "#{c}", c ] }), prompt: "職種を選択 ▼" %>
+    </div>
+    <div class="col-md-3">
+      <%= select_tag :year,
+          options_for_select( @years.map {|c| [ "#{c}", c ] }), prompt: "年度を選択 ▼" %>
+    </div>
+    <br><br>
+    <div id="text_field"><%= text_field( :search, :name, :placeholder => "キーワード") %>
+      <%= submit_tag("検索", :class => "btn") %></div>
+    <% end %>
+</div>
+  </div> 
+-->
+
+  <div class="panel panel-warning search">
+    <div class="panel-heading interview-header">
+      <h3 class="panel-title">ブックマーク数が多い面接情報</h3>
+    </div>
+    <div class="panel-body">
+      <ul class="popular_offers">
+        <% number = 118  %>
+        <% @popular_offers.each do |p| %>
+        <li class="popular_offer"><%= link_to p.name + "　" + p.year.to_s + "年度　" + p.job, :controller => "interviews", :action => "view", :id => p.id  %>　<span class="badge"><%= number %>ブックマーク</span></li>
+        <% number -= 7 %>
+        <% end %>
+      </ul>
+    </div>
+ </div>
+  
+
+</div>
