@@ -1,4 +1,6 @@
 class OffersController < ApplicationController
+  layout 'united'
+
   def index
   end
 
