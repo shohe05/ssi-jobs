@@ -19,6 +19,8 @@ class OffersController < ApplicationController
     @years.uniq!
 
     @popular_offers = Offer.find(:all, limit: 10)
+
+    @new_offers = @offers.reverse[0..9]
   end
 
   def search
