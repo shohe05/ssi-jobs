@@ -1,4 +1,6 @@
 SsiJobs::Application.routes.draw do
+  get "bookmarks/add"
+  get "bookmarks/delete"
   devise_for :users
   root :to => 'offers#index'
 
