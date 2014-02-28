@@ -34,6 +34,6 @@ production:
   encoding: utf8
   database: ssi_jobs_production
   pool: 5
-  username: jobs
-  password: ssijobs
+  username: jobs_production
+  password: jobjob956
   socket: /tmp/mysql.sock
