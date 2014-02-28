@@ -1,6 +1,7 @@
 class InterviewsController < ApplicationController
 
   before_action :authenticate_user!
+  layout 'flatly'
 
   def index
   end
@@ -41,7 +42,6 @@ class InterviewsController < ApplicationController
     @years.uniq!
 
     @bookmarks = Offer.find(:all, :limit => 5)
-    @histories = Offer.find(:all, :limit => 5, :conditions => ["name like ?", "%NTT%"])
 
     # 履歴に追加
     # redirect_to :controller => "histories", :action => "add", :id => @id unless History.last.offer_id == @id

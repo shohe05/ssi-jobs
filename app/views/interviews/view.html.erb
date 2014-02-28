@@ -1,2 +1,143 @@
-<h1>Interviews#view</h1>
-<p>Find me in app/views/interviews/view.html.erb</p>
+<!-- model Interview user_id:integer ordinal:string interviewer:string distance:string desk_presence:string atomosphere:string others:string question:string impression:string offer_id:integer -->
+
+
+
+<style>
+   #content {
+    background: #f5f5f5;
+   }
+
+   .result {
+    width: 80%;
+    background: white;
+   }
+
+
+   /*
+   .interview {
+    border: ridge 10px mediumseagreen;
+    background: lightgreen;
+   }
+  */
+   #mytable {
+      width:700px;
+      margin-left: 2%; 
+      margin-bottom: 5%;
+      padding:0;
+      border:0;
+      border-spacing:0;
+      border-collapse:collapse;
+  }
+  caption {
+      padding:0 0 0 0;
+      font:italic 11px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+      text-align:right;
+  }
+  th {
+      font:bold 11px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+      color:#4f6b72;
+      border:1px solid #c1dad7;
+      letter-spacing:2px;
+      text-transform:uppercase;
+      text-align:left;
+      padding:6px 6px 6px 12px;
+      background:#cae8ea url("img/bg_header.jpg") no-repeat;
+      min-width: 100px;
+  }
+  th.nobg {
+      border-top:0;
+      border-left:0;
+      background:none;
+  }
+  td {
+      border:1px solid #c1dad7;
+      background:#fff;
+      padding:6px 6px 6px 12px;
+      /*color:#4f6b72;*/
+  }
+
+  .result {
+    width: 65%;
+  }
+
+  .interview-header {
+    background: red;
+  }
+  /*
+  td.alt {
+      background:#F5FAFA;
+      /*color:#797268;*/
+  }
+  /*
+  th.spec {
+      background:#fff url("img/bullet1.gif") no-repeat;
+      font:bold 10px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+  }
+  th.specalt {
+      background:#f5fafa url("img/bullet2.gif") no-repeat;
+      font:bold 10px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+      color:#797268;
+  }
+  */
+  
+</style>
+
+
+<div class="container">
+      <div class="row">
+
+        <ol class="breadcrumb">
+            <li><%= link_to "Home", :controller => "offers", :action => "index" %></a></li>
+            <li><%= link_to "「" + @search_phrase  + "」の検索結果", :controller => "offers", :action => "search", :name => @query_name, :category => @query_category, :job => @query_job, :year => @query_year, :id => "re_search"  %></li>
+            <li><%= @offer.name %> <%= @offer.job %></li>
+          </ol>
+        
+        <div class="panel panel-danger result">
+            <div class="panel-heading interview-header">
+              <h3 class="panel-title"><%= @offer.name %>　<%= @offer.year %>年度　<%= @offer.job %><span style="margin-left:8%; font-size:15px;"><%= link_to "ブックマークに追加", :controller => "bookmarks", :action => "add", :offer_id => @offer.id %></span></h3>
+            </div>
+              <div class="panel-body">
+                <div class ="interview">
+		            <% @interviews.each do |interview| %>
+		              <%= interview %>
+		              <%= interview.class %>
+		              <table id="mytable">
+		                <tr>
+		                  <th scope="col" abbr="Configurations" class="nobg"><%= interview.ordinal %>次選考</th>
+		                  <caption>posted by <a href="">Test User</a></caption>
+		                </tr>
+		                <tr>
+		                  <th scope="col">形式</th>
+		                  <td><%= interview.interviewer %></td>
+		                </tr>
+		                <tr>
+		                  <th scope="col">距離</th>
+		                  <td class="alt"><%= interview.distance %></td>
+		                </tr>
+		                <tr>
+		                  <th scope="col">机の有無</th>
+		                  <td><%= interview.desk_presence %></td>
+		                </tr>
+		                <tr>
+		                  <th scope="col">雰囲気</th>
+		                  <td class="alt"><%= interview.atomosphere %></td>
+		                </tr>
+		                <tr>
+		                  <th scope="col">質問内容</th>
+		                  <td><%= interview.question %></td>
+		                </tr>
+		                <tr>
+		                  <th scope="col">感想</th>
+		                  <td class="alt"><%= interview.impression %></td>
+		                </tr>
+		              </table>
+		            <% end %>
+         </div>
+
+
+              </div>
+          </div>
+       </div>
+    </div>
+  
+
