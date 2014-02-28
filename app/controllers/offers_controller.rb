@@ -1,5 +1,5 @@
 class OffersController < ApplicationController
-  layout 'flatly'
+	before_action :authenticate_user!
 
   def index
     @offers = Offer.all

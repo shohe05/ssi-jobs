@@ -10,7 +10,7 @@ SsiJobs::Application.routes.draw do
   get "offers/view"
   get "offers/delete"
   post "offers/search"
-
+  get "users/sign_out"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

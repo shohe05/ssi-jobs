@@ -1,6 +1,6 @@
 class InterviewsController < ApplicationController
 
-  layout 'flatly'
+  before_action :authenticate_user!
 
   def index
   end
