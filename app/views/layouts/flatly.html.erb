@@ -220,7 +220,6 @@
 
         <!--ブックマーク-->
 
-        <% if false %>
         <% @bookmarks = []
               if current_user.present?
                 @user_id = current_user.id
@@ -229,8 +228,7 @@
                 @bookmarks << Offer.find_by_id(bookmark.offer_id)
                 end 
               end %>
-          %>
-          <% end%>
+          
         <div class="panel panel-success">
             <div class="panel-heading">
               <h3 class="panel-title">ブックマーク</h3>
@@ -240,7 +238,9 @@
             <% @bookmarks ||= [] %>
 
             <% @bookmarks.each do |bookmark| %>
-            <div class="panel-body"><%= link_to bookmark.name, :controller => "interviews", :action => "view", :id => bookmark.id  %></div>
+            <div class="panel-body"><%= link_to bookmark.name, :controller => "interviews", :action => "view", :id => bookmark.id  %>
+            <span id="bookmark-delete" style="float:right"><%= link_to "×", :controller => "bookmarks", :action => "delete", :id => bookmark.id  %></span>
+            </div>
             <% end %>
         </div>
 

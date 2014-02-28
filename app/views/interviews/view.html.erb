@@ -87,25 +87,21 @@
       <div class="row">
 
         <ol class="breadcrumb">
+        	<% @search_phrase ||= "" %>
             <li><%= link_to "Home", :controller => "offers", :action => "index" %></a></li>
             <li><%= link_to "「" + @search_phrase  + "」の検索結果", :controller => "offers", :action => "search", :name => @query_name, :category => @query_category, :job => @query_job, :year => @query_year, :id => "re_search"  %></li>
             <li><%= @offer.name %> <%= @offer.job %></li>
           </ol>
         
-        <div class="panel panel-danger result">
+        <div class="panel panel-warning result">
             <div class="panel-heading interview-header">
               <h3 class="panel-title"><%= @offer.name %>　<%= @offer.year %>年度　<%= @offer.job %><span style="margin-left:8%; font-size:15px;"><%= link_to "ブックマークに追加", :controller => "bookmarks", :action => "add", :offer_id => @offer.id %></span></h3>
             </div>
               <div class="panel-body">
                 <div class ="interview">
 		            <% @interviews.each do |interview| %>
-		              <%= interview %>
-		              <%= interview.class %>
+	                  <h3><%= interview.ordinal %>次選考</h3><br>
 		              <table id="mytable">
-		                <tr>
-		                  <th scope="col" abbr="Configurations" class="nobg"><%= interview.ordinal %>次選考</th>
-		                  <caption>posted by <a href="">Test User</a></caption>
-		                </tr>
 		                <tr>
 		                  <th scope="col">形式</th>
 		                  <td><%= interview.interviewer %></td>

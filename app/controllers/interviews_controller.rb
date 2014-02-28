@@ -40,9 +40,7 @@ class InterviewsController < ApplicationController
     @years = []
     @offers.each {|offer| @years << offer.year}
     @years.uniq!
-
-    @bookmarks = Offer.find(:all, :limit => 5)
-
+    
     # 履歴に追加
     # redirect_to :controller => "histories", :action => "add", :id => @id unless History.last.offer_id == @id
   end

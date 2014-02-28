@@ -5,7 +5,8 @@ class BookmarksController < ApplicationController
   end
 
   def delete
-  	Bookmark.find_by_id(params[:offer_id]).delete
+  	@bookmark = Bookmark.find(:first, :conditions => ["offer_id = ?", params[:id]])
+  	@bookmark.destroy
   	redirect_to :back
   end
 end
