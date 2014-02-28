@@ -36,4 +36,6 @@ production:
   pool: 5
   username: jobs_production
   password: jobjob956
-  socket: /tmp/mysql.sock
+  host: 133.2.37.196
+  port: 3306
+  socket: /var/lib/mysql/mysql.sock
