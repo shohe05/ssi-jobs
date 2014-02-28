@@ -33,9 +33,9 @@ production:
   adapter: mysql2
   encoding: utf8
   database: ssi_jobs_production
+  reconnect: false
   pool: 5
   username: jobs_production
   password: jobjob956
   host: 133.2.37.196
   port: 3306
-  socket: /var/lib/mysql/mysql.sock
