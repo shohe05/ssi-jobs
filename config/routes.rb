@@ -1,4 +1,5 @@
 SsiJobs::Application.routes.draw do
+  devise_for :users
   root :to => 'offers#index'
 
   get "interviews/index"
