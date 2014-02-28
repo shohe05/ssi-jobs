@@ -1,5 +1,29 @@
+<style>
+.col-md-2 {
+	display: none;
+}
+
+#quick_search {
+	display: none;
+}
+
+#register-form {
+	/*float: right;*/
+}
+
+#about {
+	/*width:auto;*/
+}
+</style>
+
+<div class="jumbotron" id="about">
+    <h1>SSI jobs</h1>
+    <p>社会情報学部生の就活情報データベース</p>
+ </div>
+
 <h2>新規登録</h2>
 
+<div id="register-form">
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html=>{:class=>"col-lg-6"}) do |f| %>
   <%= devise_error_messages! %>
 
@@ -15,5 +39,6 @@
   <div class="actions form-group"><%= f.submit "登録", :class=>"btn btn-primary btn-lg" %></div>
 <% end %>
 
+</div>
 
 <%= render "devise/shared/links" %>

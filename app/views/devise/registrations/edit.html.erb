@@ -1,3 +1,13 @@
+<style>
+.col-md-2 {
+  display: none;
+}
+
+#quick_search {
+  display: none;
+}
+</style>
+
 <h2>アカウント情報を編集</h2>
 
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put, :class=>"col-lg-6" }) do |f| %>
