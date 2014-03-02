@@ -26,7 +26,7 @@ Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route(
  
 "IBM",
  
-"情報処理",
+"SI(System Integrator)",
  
 "ITスペシャリスト（SE）",
 
@@ -71,7 +71,7 @@ Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route(
  
 "NTTデータ",
  
-"情報処理",
+"SI(System Integrator)",
  
 "営業・SE",
 
@@ -86,7 +86,7 @@ Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route(
  
 "NTTデータ",
  
-"情報処理",
+"SI(System Integrator)",
  
 "SE",
 
@@ -101,7 +101,7 @@ Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route(
  
 "NTTデータアイ",
  
-"ソフトウェア",
+"SI(System Integrator)",
  
 "SE",
 
@@ -116,7 +116,7 @@ Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route(
  
 "NTTデータフィナンシャルコア",
  
-"情報処理",
+"SI(System Integrator)",
  
 "SE",
 
@@ -131,7 +131,7 @@ Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route(
  
 "野村総合研究所",
  
-"情報処理",
+"SI(System Integrator)",
  
 "SE",
 
@@ -206,7 +206,7 @@ Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route(
  
 "SCSK株式会社",
  
-"ソフトウェア",
+"SI(System Integrator)",
  
 "SE",
 
@@ -221,7 +221,7 @@ Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route(
  
 "日本ユニシス",
  
-"情報処理",
+"SI(System Integrator)",
  
 "営業・SE",
 
@@ -236,7 +236,7 @@ Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route(
  
 "日立製作所",
  
-"総合電機",
+"ハードウェア",
  
 "SE",
 
@@ -251,7 +251,7 @@ Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route(
  
 "DTS",
  
-"ソフトウェア",
+"SI(System Integrator)",
  
 "SE",
 
@@ -266,7 +266,7 @@ Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route(
  
 "IIJ",
  
-"インターネット関連",
+"通信",
  
 "営業",
 
@@ -281,7 +281,7 @@ Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route(
  
 "リコー",
  
-"精密機器",
+"ハードウェア",
  
 "R&D",
 
@@ -311,7 +311,7 @@ Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route(
  
 "NEC",
  
-"総合電機",
+"ハードウェア",
  
 "SE",
 
@@ -326,7 +326,7 @@ Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route(
  
 "富士通BSC",
  
-"情報処理",
+"ハードウェア",
  
 "SE",
 
@@ -341,7 +341,7 @@ Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route(
  
 "富士通システムズ・ウエスト",
  
-"ソフトウェア",
+"ハードウェア",
  
 "SE",
 
@@ -401,7 +401,7 @@ Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route(
  
 "三菱電機",
  
-"総合電機",
+"ハードウェア",
  
 "技術",
 
