@@ -12,8 +12,12 @@ SsiJobs::Application.routes.draw do
   get "offers/view"
   get "offers/delete"
   post "offers/search"
-  #get "users/sign_out"
-  # The priority is based upon order of creation: first created -> highest priority.
+
+  devise_scope :user do
+    get "/users/sign_out" => "devise/sessions#destroy"
+  end 
+  #get "devise/sessions/destroy" 
+	# The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
