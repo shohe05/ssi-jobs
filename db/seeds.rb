@@ -22,7 +22,7 @@ set_autoincrement_number(:interviews, 0)
 
 
 #1
-Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route(
+Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route_and_image_path(
  
 "IBM",
  
@@ -32,12 +32,14 @@ Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route(
 
 2014,
  
-"自由"
+"自由",
+
+"/images/ibm.jpg"
  
 )
 
 #2
-Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route(
+Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route_and_image_path(
  
 "NTTドコモ",
  
@@ -47,12 +49,14 @@ Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route(
 
 2014,
  
-"自由"
+"自由",
+
+"/images/nttdocomo.jpg"
  
 )
 
 #3
-Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route(
+Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route_and_image_path(
  
 "NTTコミュニケーションズ",
  
@@ -62,12 +66,14 @@ Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route(
 
 2014,
  
-"自由"
+"自由",
+
+"/images/nttcommunications.jpg"
  
 )
 
 #4
-Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route(
+Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route_and_image_path(
  
 "NTTデータ",
  
@@ -77,12 +83,14 @@ Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route(
 
 2014,
  
-"学校推薦"
+"学校推薦",
+
+"/images/nttdata.jpg"
  
 )
 
 #5
-Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route(
+Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route_and_image_path(
  
 "NTTデータ",
  
@@ -92,12 +100,14 @@ Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route(
 
 2014,
  
-"自由"
+"自由",
+
+"/images/nttdata.jpg"
  
 )
 
 #6
-Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route(
+Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route_and_image_path(
  
 "NTTデータアイ",
  
@@ -107,12 +117,14 @@ Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route(
 
 2014,
  
-"自由"
+"自由",
+
+"/images/nttdataai.jpg"
  
 )
 
 #7
-Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route(
+Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route_and_image_path(
  
 "NTTデータフィナンシャルコア",
  
@@ -122,12 +134,14 @@ Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route(
 
 2014,
  
-"自由"
+"自由",
+
+""
  
 )
 
 #8
-Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route(
+Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route_and_image_path(
  
 "野村総合研究所",
  
@@ -137,12 +151,14 @@ Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route(
 
 2014,
  
-"自由"
+"自由",
+
+"/images/nomura.jpeg"
  
 )
 
 #9
-Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route(
+Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route_and_image_path(
  
 "日本マイクロソフト",
  
@@ -152,12 +168,14 @@ Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route(
 
 2014,
  
-"自由"
+"自由",
+
+"/images/microsoft.jpeg"
  
 )
 
 #10
-Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route(
+Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route_and_image_path(
  
 "富士ゼロックス",
  
@@ -167,12 +185,14 @@ Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route(
 
 2014,
  
-"自由"
+"自由",
+
+"/images/hujizerox.jpeg"
  
 )
 
 #11
-Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route(
+Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route_and_image_path(
  
 "ソフトバンク",
  
@@ -182,12 +202,14 @@ Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route(
 
 2014,
  
-"自由"
+"自由",
+
+"/images/softbank.jpeg"
  
 )
 
 #12
-Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route(
+Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route_and_image_path(
  
 "ソフトバンク",
  
@@ -197,12 +219,14 @@ Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route(
 
 2014,
  
-"インターンシップルート"
+"インターンシップルート",
+
+"/images/softbank.jpeg"
  
 )
 
 #13
-Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route(
+Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route_and_image_path(
  
 "SCSK株式会社",
  
@@ -212,12 +236,14 @@ Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route(
 
 2014,
  
-"教授推薦"
+"教授推薦",
+
+"/images/scsk.jpeg"
  
 )
 
 #14
-Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route(
+Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route_and_image_path(
  
 "日本ユニシス",
  
@@ -227,12 +253,14 @@ Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route(
 
 2014,
  
-"自由"
+"自由",
+
+"/images/unisis.jpeg"
  
 )
 
 #15
-Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route(
+Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route_and_image_path(
  
 "日立製作所",
  
@@ -242,12 +270,14 @@ Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route(
 
 2014,
  
-"自由"
+"自由",
+
+"/images/hitachi.jpeg"
  
 )
 
 #16
-Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route(
+Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route_and_image_path(
  
 "DTS",
  
@@ -257,12 +287,14 @@ Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route(
 
 2014,
  
-"自由"
+"自由",
+
+"/images/dts.jpeg"
  
 )
 
 #17
-Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route(
+Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route_and_image_path(
  
 "IIJ",
  
@@ -272,12 +304,14 @@ Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route(
 
 2014,
  
-"自由"
+"自由",
+
+"/images/llj.jpg"
  
 )
 
 #18
-Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route(
+Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route_and_image_path(
  
 "リコー",
  
@@ -287,12 +321,14 @@ Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route(
 
 2014,
  
-"自由"
+"自由",
+
+"/images/ricoh.jpeg"
  
 )
 
 #19
-Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route(
+Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route_and_image_path(
  
 "NECソフト",
  
@@ -302,12 +338,14 @@ Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route(
 
 2014,
  
-"自由"
+"自由",
+
+"/images/necsoft.jpeg"
  
 )
 
 #20
-Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route(
+Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route_and_image_path(
  
 "NEC",
  
@@ -317,12 +355,14 @@ Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route(
 
 2014,
  
-"自由"
+"自由",
+
+"/images/nec.jpeg"
  
 )
 
 #21
-Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route(
+Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route_and_image_path(
  
 "富士通BSC",
  
@@ -332,12 +372,14 @@ Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route(
 
 2014,
  
-"自由"
+"自由",
+
+"/images/hujitubsc.jpeg"
  
 )
 
 #22
-Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route(
+Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route_and_image_path(
  
 "富士通システムズ・ウエスト",
  
@@ -347,12 +389,14 @@ Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route(
 
 2014,
  
-"自由"
+"自由",
+
+"/images/hujitusystemswest.jpeg"
  
 )
 
 #23
-Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route(
+Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route_and_image_path(
  
 "全日本空輸",
  
@@ -362,12 +406,14 @@ Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route(
 
 2014,
 
-"自由"
+"自由",
+
+"/images/ana.jpg"
  
 )
 
 #24
-Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route(
+Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route_and_image_path(
  
 "SAPジャパン",
  
@@ -377,12 +423,14 @@ Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route(
 
 2014,
  
-"自由"
+"自由",
+
+"/images/sapjapan.jpeg"
 
 )
 
 #25
-Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route(
+Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route_and_image_path(
  
 "ソフトバンク",
  
@@ -392,12 +440,14 @@ Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route(
 
 2013,
  
-"自由"
+"自由",
+
+"/images/softbank.jpeg"
 
 )
 
 #26
-Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route(
+Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route_and_image_path(
  
 "三菱電機",
  
@@ -407,12 +457,14 @@ Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route(
 
 2014,
  
-"自由"
+"自由",
+
+"/images/mitsubisidenki.jpeg"
 
 )
 
 #27
-Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route(
+Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route_and_image_path(
  
 "みずほFG",
  
@@ -422,12 +474,14 @@ Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route(
 
 2014,
  
-"自由"
+"自由",
+
+"/images/mizuho.jpeg"
 
 )
 
 #28
-Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route(
+Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route_and_image_path(
  
 "横浜銀行",
  
@@ -437,7 +491,9 @@ Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route(
 
 2014,
  
-"自由"
+"自由",
+
+"/images/yokohamaginkou.jpeg"
 
 )
 

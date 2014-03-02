@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140302064031) do
+ActiveRecord::Schema.define(version: 20140302132216) do
 
   create_table "bookmarks", force: true do |t|
     t.integer  "user_id"
@@ -61,6 +61,7 @@ ActiveRecord::Schema.define(version: 20140302064031) do
     t.string   "screening_route"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.string   "image_path"
   end
 
   create_table "posts", force: true do |t|

@@ -13,6 +13,15 @@
   .popular_offer {
     margin-bottom: 2em;
   }
+
+	#logo-box {
+		display:flex;
+	}
+
+	.logo {
+		border: 10;
+		margin: 50em 2em 2em 2em;
+	}
 </style>
 
 <div class="container">
@@ -46,7 +55,7 @@
   </div> 
 -->
 
-<div class="panel panel-warning search">
+<div class="panel panel-danger search">
     <div class="panel-heading interview-header">
       <h3 class="panel-title">新着面接情報</h3>
     </div>
@@ -56,6 +65,20 @@
         <li class="new_offer"><%= link_to p.name + "　" + p.year.to_s + "年度　" + p.job, :controller => "interviews", :action => "view", :id => p.id  %>
         <% end %>
       </ul>
+    </div>
+ </div>
+
+ <!-- ここからロゴ -->
+<div class="panel panel-warning search">
+    <div class="panel-heading interview-header">
+      <h3 class="panel-title">掲載企業一覧</h3>
+    </div>
+    <div class="panel-body" id="logo-box">
+			<div>
+        <% @offers.each do |o| %>
+					<span class="logo"><%= link_to image_tag(o.image_path, :width => "160px", :height => "60px", :alt => o.name), :controller => "interviews", :action => "view", :id => o.id %></span>
+        <% end %>
+				</div>
     </div>
  </div>
 
