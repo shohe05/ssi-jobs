@@ -10,7 +10,7 @@ ja:
 
   devise:
     failure:
-      unauthenticated: 'ログインしてください。新規登録の方は登録したメールアドレスに記載されたURLをクリックして本登録を完了してください'
+      unauthenticated: 'ログインしてください。本登録がお済みでない方は登録したメールアドレスに送られたメッセージに記載されたURLをクリックして本登録を完了してください。'
 #      unauthenticated: 'You need to sign in or sign up before continuing.'
       unconfirmed: '本登録を行ってください。本登録は新規登録時に、登録したメールアドレスに送られたURLをクリックすることで行うことができます。'
 #      unconfirmed: 'You have to confirm your account before continuing.'
@@ -61,7 +61,7 @@ ja:
 #      unlocked: 'Your account was successfully unlocked. You are now signed in.'
     mailer:
       confirmation_instructions:
-        subject: 'アカウントの登録方法'
+        subject: 'SSI jobs 本登録'
 #        subject: 'Confirmation instructions'
       reset_password_instructions:
         subject: 'パスワードの再設定'
