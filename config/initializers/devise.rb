@@ -4,13 +4,13 @@ Devise.setup do |config|
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
   # confirmation, reset password and unlock tokens in the database.
-  # config.secret_key = '6244182792eb21d9ba777a883b91c5e5f45f4aa4a09541b50db114b72107895d107bb796dcbd705deb67007f62fa5e514b36d48eac9fd4894db377b4d3499d4e'
+  # config.secret_key = 'ee31638887ad529351e28305b05bf1cd4ab8355bf713637b731a73969af875c89dc8277e4f1489d25dc814f2df0ff9c7eb2c3c438672a93b7e819bf6eecee4b9'
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
-  config.mailer_sender = 'ssijobs1@gmail.com'
+  config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
 
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
@@ -95,7 +95,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 10
 
   # Setup a pepper to generate the encrypted password.
-  # config.pepper = 'd952146bbb79cc8b13784b73393e037ca3c9688d94b06958cb8cee766039a424ceea9d487fccfd577c130f4c1c0e6f8882a5accba11ba4475fbf298481b5ce1a'
+  # config.pepper = '93747a9ac8b91818f43b3e3c4bd3f2f5cad285048edceff472244d9b6abccb682e9f5e38cbfaa5b52057c65d52eb1bea5190223978db324e2398dbbbbd865ac0'
 
   # ==> Configuration for :confirmable
   # A period that the user is allowed to access the website even without
@@ -222,8 +222,7 @@ Devise.setup do |config|
   # config.navigational_formats = ['*/*', :html]
 
   # The default HTTP method used to sign out a resource. Default is :delete.
-  # config.sign_out_via = :delete
-  config.sign_out_via = :get
+  config.sign_out_via = :delete
 
   # ==> OmniAuth
   # Add a new OmniAuth provider. Check the wiki for more information on setting
@@ -252,6 +251,5 @@ Devise.setup do |config|
   # When using omniauth, Devise cannot automatically set Omniauth path,
   # so you need to do it manually. For the users scope, it would be:
   # config.omniauth_path_prefix = '/my_engine/users/auth'
-
-  config.secret_key = '1df5b9f464564ee90dcf2a61e065cba931eabc33e093986dd34ee7f720472701d9147261e6f35c0f1197deef4869988b8f7cbd052d0a2ae8eb04f653a92504ee'
+  config.secret_key = '7d1608431ed5902812c8eda4544af52a2ff768ce58362afb40b0e2dba6b4d97912e207336d885729886b00ebe76fdab96ae4981fe3e3bc59e50caef827c14f3f'	
 end

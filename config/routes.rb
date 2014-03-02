@@ -1,7 +1,8 @@
 SsiJobs::Application.routes.draw do
+  devise_for :users
   get "bookmarks/add"
   get "bookmarks/delete"
-  devise_for :users
+  #devise_for :users
   root :to => 'offers#index'
 
   get "interviews/index"
@@ -12,7 +13,7 @@ SsiJobs::Application.routes.draw do
   get "offers/view"
   get "offers/delete"
   post "offers/search"
-  get "users/sign_out"
+  #get "users/sign_out"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
