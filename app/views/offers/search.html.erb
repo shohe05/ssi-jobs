@@ -44,10 +44,10 @@ p a {
 <div class="container">
 
       <div class="row" id="inner-row">
-  
         <ol class="breadcrumb">
-            <li><%= link_to "Home", :controller => "offers", :action => "index" %></li>
-            <li><%= link_to @search_phrase + "の検索結果", :controller => "offers", :action => "search", :name => @query_name, :category => @query_category, :job => @query_job, :year => @query_year, :id => "re_search"  %></li>
+            <!--<li><%= link_to "Home", :controller => "offers", :action => "index" %></li>
+						<li><%= link_to @search_phrase + "の検索結果", :controller => "offers", :action => "search", :name => @query_name, :category => @query_category, :job => @query_job, :year => @query_year, :id => "re_search"  %></li> -->
+						<li><%= @search_phrase%>の検索結果</li>
           </ol>
 
             <div class="container" id="result-container">

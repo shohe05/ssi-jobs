@@ -89,6 +89,7 @@
 <div class="container">
       <div class="row">
 
+				<!--
         <ol class="breadcrumb">
         	<% @search_phrase ||= "" %>
             <li><%= link_to "Home", :controller => "offers", :action => "index" %></a></li>
@@ -96,9 +97,10 @@
             <li><%= @offer.name %> <%= @offer.job %></li>
           </ol>
         
+					-->
         <div class="panel panel-warning result">
             <div class="panel-heading interview-header">
-							<h3 class="panel-title"><%= @offer.name %>　<%= @offer.year %>年度　<%= @offer.job %><span style="margin-left:8%; font-size:15px;"><%= link_to "ブックマークに追加", :controller => "bookmarks", :action => "add", :class => "bookmark-link", :offer_id => @offer.id %></span></h3>
+							<h3 class="panel-title"><%= @offer.name %>　<%= @offer.year %>年度　<%= @offer.job %><span style="margin-left:8%; font-size:15px;"><%= link_to "+ ブックマークに追加", :controller => "bookmarks", :action => "add", :class => "bookmark-link", :offer_id => @offer.id %></span></h3>
             </div>
               <div class="panel-body">
                 <div class ="interview">

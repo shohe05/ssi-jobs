@@ -136,7 +136,7 @@ Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route_a
  
 "自由",
 
-""
+"/images/nttdatafinacialcore.png"
  
 )
 
