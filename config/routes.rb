@@ -2,7 +2,6 @@ SsiJobs::Application.routes.draw do
   devise_for :users
   get "bookmarks/add"
   get "bookmarks/delete"
-  #devise_for :users
   root :to => 'offers#index'
 
   get "interviews/index"
