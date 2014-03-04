@@ -86,6 +86,7 @@ SsiJobs::Application.configure do
     :domain => 'example.com',
     :user_name => "ssijobs1@gmail.com",
     :password => "ssijobsaoyama",
+    :password => "fmbcjiqvuxmbahxg",
     :authentication => 'plain',
     :enable_starttls_auto => true,
   } 

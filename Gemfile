@@ -52,3 +52,5 @@ gem 'twitter-bootswatch-rails-helpers'
 
 # use devise
 gem 'devise'
+
+gem 'rails-i18n', '~> 4.0.0'
