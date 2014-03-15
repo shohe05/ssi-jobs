@@ -66,6 +66,10 @@
 	.bookamrk-link {
 		color: white;
 	}
+
+	#bookmark>a {
+    color: white;
+	}
   /*
   td.alt {
       background:#F5FAFA;
@@ -100,9 +104,10 @@
 					-->
         <div class="panel panel-warning result">
             <div class="panel-heading interview-header">
-							<h3 class="panel-title"><%= @offer.name %>　<%= @offer.year %>年度　<%= @offer.job %><span style="margin-left:8%; font-size:15px;"><%= link_to "+ ブックマークに追加", :controller => "bookmarks", :action => "add", :class => "bookmark-link", :offer_id => @offer.id %></span></h3>
+							<h3 class="panel-title"><%= @offer.name %>　<%= @offer.year %>年度　<%= @offer.job %>
             </div>
               <div class="panel-body">
+								<span id="bookmark" style="padding: 10px; border-radius: 10px; background: #e74c3c; font-color: white; float: right;"><%= link_to "+ ブックマークに追加", :controller => "bookmarks", :action => "add", :class => "bookmark-link", :offer_id => @offer.id %></span>
                 <div class ="interview">
 		            <% @interviews.each do |interview| %>
 	                  <h3><%= interview.ordinal %>次選考</h3><br>
