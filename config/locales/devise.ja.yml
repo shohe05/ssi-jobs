@@ -7,6 +7,9 @@ ja:
 #      already_confirmed: "was already confirmed"
       not_locked: "は凍結されていません"
 #      not_locked: "was not locked"
+      not_saved:
+        one: ""
+        other: ""
 
   devise:
     failure:
@@ -18,6 +21,7 @@ ja:
       locked: 'あなたのアカウントは凍結されています。'
 #      locked: 'Your account is locked.'
       invalid: 'メールアドレスかパスワードが違います。'
+      not_found_in_database: "メールアドレスかパスワードが違います"
 #      invalid: 'Invalid email or password.'
       invalid_token: '認証キーが不正です。'
 #      invalid_token: 'Invalid authentication token.'
@@ -68,4 +72,3 @@ ja:
       unlock_instructions:
         subject: 'アカウントの凍結解除'
 #        subject: 'Unlock Instructions'
-
