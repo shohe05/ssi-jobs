@@ -17,8 +17,8 @@ end
 # Initialize
 Offer.destroy_all
 Interview.destroy_all
-set_autoincrement_number(:offers, 0)
-set_autoincrement_number(:interviews, 0)
+set_autoincrement_number(:offers, 1)
+set_autoincrement_number(:interviews, 1)
 
 
 #1
