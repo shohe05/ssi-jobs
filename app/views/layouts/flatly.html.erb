@@ -48,8 +48,11 @@
   background: white;
  }
 
- .quick-search, .search-btn {
+ .quick-search {
   margin-top: 4%;
+ }
+ .search-btn {
+	 margin-left: 1em;
  }
 
  #modal, #title > a {
@@ -109,10 +112,9 @@
 
             <!--クイック検索-->
             <li><%= form_tag(offers_search_path, :class => "navbar-form navbar-left", :role => "search", :id => "quick_search") do %>
-              <div id="form-group" class="col-xs-9 quick-search"><%= text_field( :search, :name, :placeholder => "会社名で検索", :class => "form-control") %></div><%= submit_tag("検索", :class => "btn btn-danger search-btn") %>
+              <div id="form-group" class="quick-search"><%= text_field( :search, :name, :placeholder => "会社名で検索", :class => "form-control") %><%= submit_tag("検索", :class => "btn btn-danger search-btn") %></div>
             <% end %>
           </li>
-
 
 
             <!--詳細検索-->
@@ -173,7 +175,7 @@
     <div class="row">
 
       <!--左サイドバー-->
-      <div class="col-md-2 col-xs-2">
+      <div class="col-md-2">
 
         <!--業界-->
         <div class="panel panel-info">
@@ -205,7 +207,7 @@
       </div>
       <!--ここまでサイドバー-->
 
-      <div class="col-md-8 col-xs-10">
+      <div class="col-md-8">
         <% if notice %>
           <p class="alert alert-notice"><%= notice %></p>
         <% end %>
@@ -216,7 +218,7 @@
       </div>
 
       <!--ここから左サイドバー-->
-      <div class="col-md-2 col-xs-12">
+      <div class="col-md-2">
 
         <!--ブックマーク-->
 
@@ -235,12 +237,13 @@
             </div>
 
             <!--nilガード-->
-            <% @bookmarks ||= [] %>
 
+						<% if @bookmarks.present? %>
             <% @bookmarks.each do |bookmark| %>
             <div class="panel-body"><%= link_to bookmark.name, :controller => "interviews", :action => "view", :id => bookmark.id  %>
             <span id="bookmark-delete" style="float:right"><%= link_to "×", :controller => "bookmarks", :action => "delete", :id => bookmark.id  %></span>
             </div>
+            <% end %>
             <% end %>
         </div>
 
