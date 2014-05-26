@@ -69,13 +69,20 @@
  </div>
 
  <!-- ここからロゴ -->
+<%
+@logos = []
+@offers.each do |o|
+	next if @logos.size > 0 and @logos.any?{|l| l.name == o.name}
+	@logos << o
+end
+%>
 <div class="panel panel-warning search">
     <div class="panel-heading interview-header">
       <h3 class="panel-title">掲載企業一覧</h3>
     </div>
     <div class="panel-body" id="logo-box">
 			<div>
-        <% @offers.each do |o| %>
+        <% @logos.each do |o| %>
 					<span class="logo"><%= link_to image_tag(o.image_path, :width => "160px", :height => "60px", :alt => o.name), :controller => "interviews", :action => "view", :id => o.id %></span>
         <% end %>
 				</div>

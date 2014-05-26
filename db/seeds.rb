@@ -541,7 +541,7 @@ Offer.find_or_create_by_name_and_category_and_job_and_year_and_screening_route_a
  
 "個別選考（特別選考）",
 
-"/images/hitachi-logo.jpg"
+"/images/hitachi.jpeg"
 
 )
 
